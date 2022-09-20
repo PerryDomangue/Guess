@@ -1,0 +1,29 @@
+body {
+    width: 100%;    background-image: linear-gradient(to right, rgb(116, 179, 255) , rgba(0, 200, 255, 0.629));
+}
+
+#heading {
+    text-align: center;
+    line-height: 100px;
+}
+
+#bod {
+    text-align: center;
+}
+
+
+#qm {
+    border: 3px solid black;
+    width: 13%;
+    border-radius: 25%;
+    text-align: center;
+    background-color: rgb(216, 245, 179);
+    margin: auto;
+    
+}
+
+
+#guess {
+padding-top: 20px;
+}
+

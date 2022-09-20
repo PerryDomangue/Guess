@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Hi Mom</title>
+</head>
+<body>
+    <div id="heading">
+        <h1>Guess A Number?</h1>
+    </div>
+    <div id="bod">
+        <div id="rules">
+            <h3>Let's Play</h3>
+            <form action="text" value="num">
+                <label for="send">Choose how many digits your number will have.</label><br><br>
+                <input type=”text” id="num" name="num" placeholder="..." >
+                <input type="button" value="Submit" id="submit">       
+            </form>
+            <br>
+            <div id="resp"></div>
+        </div>
+        <br></br>
+        <div id="play">
+            
+        
+        <div id="qm">
+            <h1 id="qmm">???</h1>
+        </div>
+        <br>
+        <div id="guess">
+            <form action="text" value="guess">
+                <label for="guess">What number do you think it is?</label><br><br>
+                <input type=”text” id="guessNum" name="guessNum" placeholder="...">
+                <input type="button" value="Guess" id="guessSubmit">       
+            </form>
+            <br></br>
+            <div id="resp1"></div>
+        </div>
+        <div id="response"></div>
+        </div>
+    </div>
+
+<script type="module" src="./index1.js"></script>
+</body>
+</html>
