@@ -8,9 +8,12 @@ let response = document.getElementById("response")
 let guessSubmit = document.getElementById("guessSubmit")
 let qmm = document.getElementById("qmm")
 
+
 function main() {
 let submit = document.getElementById("submit")
 submit.addEventListener("click", function1)
+
+
 }
 main()
 
@@ -25,14 +28,26 @@ function main1(digits) {
     show(digits)
     let random = randGen(digits)
     let result = randMes(random, digits)
-    // qmm.innerHTML = random
-    // response.innerHTML = random
-    // score(random, digits)
-    // console.log(random)
-    // randMes(digits)
-    guessSubmit.addEventListener("click", function(){
+    guessSubmit.addEventListener("click", function(event){
         score(random)})
-    // console.log(guess)
+        event.preventDefault();
+        
+        const inputs = document.getElementById("guessNum")
+        
+        inputs.forEach(input => {
+            input.value = '';
+        });
+    // guessSubmit.addEventListener('click', function handleClick(event) {
+    //     // 👇️ if you are submitting a form
+    //     event.preventDefault();
+        
+    //     const inputs = document.getElementById("guessNum")
+        
+    //     inputs.forEach(input => {
+    //         input.value = '';
+    //     });
+    //     });
+
     console.log(guessNum)
     return main2(random, guessNum)
  
@@ -40,10 +55,7 @@ function main1(digits) {
 
 function main2 (random, guessNum) {
     console.log(random, guessNum)
- 
 }
-
-
 
 function show(digits) {
     //let digits = document.getElementById("num").value
@@ -55,7 +67,6 @@ function show(digits) {
     }
 
 function randGen(digits) {
-    // let digits = document.getElementById("num").value
     let thing = 10 ** (digits - 1)
     let random = Math.floor(Math.random() * thing)
     console.log(random) 
@@ -70,22 +81,21 @@ function randMes(random) {
 }
 
 function score(random) {
-    // console.log(random, digits, "hi")
     let guessNum = document.getElementById("guessNum").value
     let response = document.getElementById("response")
 
-    
     console.log(guessNum, random)
 
     if (random < guessNum) {
+     
         return response.innerHTML = `"too high"`
     }
     else if (random > guessNum) {
         return response.innerHTML = `"too low"`
     }
     else if (random == guessNum) {
-        return response.innerHTML = `"You got it!!!"`, qmm.innerHTML = random
+        return response.innerHTML = `"You got it!!! Reload the Page to Play Again"`, qmm.innerHTML = random
     } 
 }
-  
+
 
